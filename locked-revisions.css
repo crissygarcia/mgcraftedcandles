@@ -1,0 +1,14 @@
+/* Approved collection showcase from the previous design. */
+.collection-showcase{background:#fff;padding:95px 8%}.collection-showcase-heading{margin-bottom:46px}.collection-showcase h2{font-size:clamp(40px,4.8vw,68px)}.collection-showcase-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.collection-showcase-cards article{margin:0}.collection-art{display:block;aspect-ratio:1/.94;margin-bottom:19px;position:relative}.collection-art:after{content:"";width:37%;height:49%;position:absolute;left:32%;top:27%;border-radius:52% 52% 9% 9%;background:rgba(255,255,255,.66);box-shadow:0 13px 24px rgba(29,50,51,.12)}.collection-art.blush{background:var(--rose)}.collection-art.sand{background:var(--sand)}.collection-art.teal{background:#5b7777}.collection-showcase h3{font:500 24px/1.2 "Playfair Display",serif;margin:0 0 7px}.collection-showcase p{color:var(--muted);font-size:14px;margin:0}
+
+/* Locked initial: gold outline only, with no black circle/background. */
+.about-recreated .story-mark{background:transparent;overflow:hidden;padding:8%}.about-recreated .story-mark img{width:100%;height:100%;display:block;object-fit:contain;mix-blend-mode:normal}.gift-grid{grid-template-columns:repeat(5,1fr)}
+
+/* Strong, palette-matched callout for the custom-order action. */
+.custom-order-callout{display:inline-block;padding:7px;background:var(--sand);border:1px solid var(--gold)}.custom-order-callout .btn{display:block;border:0;border-radius:0;background:var(--ink);color:#fff;padding:15px 24px;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.custom-order-callout .btn:hover{background:var(--gold)}
+
+/* The hero is intentionally clear until an approved product photograph is supplied. */
+.hero{grid-template-columns:1fr;min-height:0;text-align:center}.hero-content{max-width:700px;margin:auto}.hero-content>p{margin-left:auto;margin-right:auto}.hero-buttons,.mini-trust{justify-content:center}
+
+@media(max-width:900px){.collection-showcase-cards{grid-template-columns:1fr}.collection-art{aspect-ratio:1.8/1}.gift-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.collection-showcase{padding:70px 6%}.gift-grid{grid-template-columns:1fr}}

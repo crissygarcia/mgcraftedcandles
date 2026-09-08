@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MG Crafted Candles — premium handcrafted candles, personalized gifts, wedding favors, baby shower favors and corporate gifting in the UAE.">
+<title>MG Crafted Candles | Handcrafted & Personalized in UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="locked-revisions.css">
+</head>
+<body>
+<div class="topbar">UAE DELIVERY • PERSONALIZED GIFTING • HANDCRAFTED IN SMALL BATCHES</div>
+
+<header class="header">
+  <a href="#home" class="logo"><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"></a>
+  <nav id="nav">
+    <a href="#shop">Shop</a><a href="#personalize">Personalize</a><a href="#gifting">Gifting</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
+    <button id="bagBtn" class="bag-btn">Bag <b id="bagCount">0</b></button>
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
+</header>
+
+<section id="searchPanel" class="search-panel">
+  <input id="searchInput" placeholder="Search candles, fragrances, gifts...">
+</section>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">MG CRAFTED CANDLES • UAE</span>
+    <h1>Gifts that feel<br><em>made for them.</em></h1>
+    <p>Handcrafted candles, personalized fragrances and thoughtful gifting for birthdays, weddings, baby showers, corporate events and everyday moments.</p>
+    <div class="hero-buttons"><a class="btn dark" href="#shop">Shop candles</a><a class="btn light" href="#personalize">Create a custom gift</a></div>
+    <div class="mini-trust"><span>✓ Handpoured</span><span>✓ Personalization</span><span>✓ UAE delivery</span></div>
+  </div>
+</section>
+
+<section class="usp-strip">
+  <div><strong>Personalized</strong><span>Names, dates & messages</span></div>
+  <div><strong>Fragrance choice</strong><span>Choose your scent profile</span></div>
+  <div><strong>Event gifting</strong><span>Small & bulk orders</span></div>
+  <div><strong>UAE delivery</strong><span>Local delivery options</span></div>
+</section>
+
+<section class="collection-showcase" id="shop" aria-labelledby="collection-showcase-title">
+  <div class="collection-showcase-heading"><span class="eyebrow">THE COLLECTION</span><h2 id="collection-showcase-title">Made for gifting,<br>and keeping.</h2></div>
+  <div class="collection-showcase-cards">
+    <article><span class="collection-art blush"></span><h3>Ready-made candles</h3><p>Quiet rituals for every day.</p></article>
+    <article><span class="collection-art sand"></span><h3>Personalized gifts</h3><p>Details made just for them.</p></article>
+    <article><span class="collection-art teal"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
+  </div>
+</section>
+
+<section class="section personalization" id="personalize">
+  <div class="personalize-copy">
+    <span class="eyebrow">CUSTOM MADE • YOUR DETAILS</span>
+    <h2>Your scent.<br><em>Your message.</em><br>Your candle.</h2>
+    <p>Make your candle personal from the fragrance to the label. Perfect for meaningful gifts and memorable events.</p>
+    <div class="check-list"><span>✓ Choose a fragrance mood</span><span>✓ Add a name, date or message</span><span>✓ Select your occasion</span><span>✓ Request quantities for events</span></div>
+    <div class="custom-order-callout"><button class="btn dark" id="customBtn">Start a custom order</button></div>
+  </div>
+  <div class="personalize-art">
+    <div class="custom-tag">YOUR NAME<br><small>YOUR DATE</small></div>
+    <div class="custom-jar"><span>MG</span><strong>MADE<br>FOR YOU</strong><small>handcrafted candle</small></div>
+  </div>
+</section>
+
+<section class="section fragrance-section">
+  <div class="heading-row"><div><span class="eyebrow">FRAGRANCE MENU</span><h2>Choose your mood</h2></div><p class="muted">Custom orders can be matched to your preferred profile.</p></div>
+  <div class="fragrance-grid">
+    <button data-fragrance="Cozy"><i>☕</i><strong>Cozy</strong><span>Vanilla • mocha • amber</span></button>
+    <button data-fragrance="Fresh"><i>✦</i><strong>Fresh</strong><span>Linen • citrus • eucalyptus</span></button>
+    <button data-fragrance="Sweet"><i>♡</i><strong>Sweet</strong><span>Strawberry • sugar • soft florals</span></button>
+    <button data-fragrance="Floral"><i>❀</i><strong>Floral</strong><span>Rose • jasmine • peony</span></button>
+    <button data-fragrance="Earthy"><i>⌁</i><strong>Earthy</strong><span>Sandalwood • cedar • botanicals</span></button>
+  </div>
+  <div id="fragranceTip" class="fragrance-tip">Selected: <b>Cozy</b> — a warm, comforting direction.</div>
+</section>
+
+<section class="section" id="gifting">
+  <div class="heading-row centered"><span class="eyebrow">PERSONALIZED GIFTING</span><h2>Made for the moments you celebrate.</h2><p>From one thoughtful present to personalized favors for your whole event.</p></div>
+  <div class="gift-grid">
+    <article><span>01</span><h3>Birthdays</h3><p>Personalized candles with names, ages, messages and favorite scents.</p><button class="text-btn" data-occasion="Birthday">Create birthday gift →</button></article>
+    <article><span>02</span><h3>Weddings</h3><p>Wedding favors and keepsakes designed around your theme and special date.</p><button class="text-btn" data-occasion="Wedding">Plan wedding favors →</button></article>
+    <article><span>03</span><h3>Baby Showers</h3><p>Sweet favors and thank-you gifts for celebrating a new little love.</p><button class="text-btn" data-occasion="Baby Shower">Create baby shower favors →</button></article>
+    <article><span>04</span><h3>Corporate</h3><p>Branded and personalized gifts for clients, teams, events and launches.</p><button class="text-btn" data-occasion="Corporate">Request corporate quote →</button></article>
+    <article><span>05</span><h3>For your occasion</h3><p>A custom candle for any moment you want to celebrate, your way.</p><button class="text-btn" data-occasion="Other">Create your occasion gift →</button></article>
+  </div>
+</section>
+
+<section class="section delivery">
+  <div><span class="eyebrow">UAE DELIVERY</span><h2>From our studio<br>to your <em>door.</em></h2><p>Choose your preferred delivery option at checkout. Delivery fees and timing can be adjusted for your actual service area before launch.</p></div>
+  <div class="delivery-cards">
+    <div><strong>Dubai</strong><span>Local delivery</span><b>From AED 20</b></div>
+    <div><strong>Other Emirates</strong><span>Courier delivery</span><b>From AED 30</b></div>
+    <div><strong>Event orders</strong><span>Quoted by quantity</span><b>Request a quote</b></div>
+  </div>
+</section>
+
+<section class="section about about-recreated" id="about" aria-labelledby="our-story-title">
+  <div class="story-mark" aria-label="MG Crafted Candles logo"><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"></div>
+
+  <div class="story-copy">
+    <span class="eyebrow">OUR STORY</span>
+    <h2 id="our-story-title">Handcrafted with a<br class="story-break"> little bit of <em>heart.</em></h2>
+
+    <p>MG Crafted Candles is built around the idea that a candle can be more than home fragrance<br class="desktop-only"> — it can become a memory, a thank-you, a celebration or a little reminder of someone special.</p>
+
+    <p>Every piece is handcrafted in small batches, with personalization and thoughtful gifting at the<br class="desktop-only"> heart of what we do.</p>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="heading-row centered"><span class="eyebrow">HELP</span><h2>Before you order</h2></div>
+  <div class="faq-list">
+    <details><summary>Can I choose my fragrance?</summary><p>Yes. Ready-made candles have their listed fragrance, while custom orders can be created around your preferred scent profile.</p></details>
+    <details><summary>Can I personalize the candle?</summary><p>Yes. Names, dates, short messages and event details can be added depending on the candle and label format.</p></details>
+    <details><summary>Do you accept bulk orders?</summary><p>Yes. Weddings, baby showers, birthdays, corporate giveaways and other events are welcome. Bulk pricing is quoted based on quantity and customization.</p></details>
+    <details><summary>How long do custom orders take?</summary><p>Lead time depends on quantity, customization and event date. For event orders, we recommend contacting us as early as possible.</p></details>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-inner"><span class="eyebrow">LET'S CREATE</span><h2>Tell us what you're<br><em>celebrating.</em></h2><p>Send your details and we'll prepare an inquiry you can continue through WhatsApp.</p>
+  <form id="contactForm"><div class="two"><input name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required></div><input name="email" type="email" placeholder="Email address"><select name="occasion" required><option value="">Occasion</option><option>Birthday</option><option>Wedding</option><option>Baby Shower</option><option>Corporate</option><option>Other</option></select><textarea name="message" rows="5" placeholder="Quantity, fragrance, personalization, event date..." required></textarea><button class="btn gold" type="submit">Prepare WhatsApp inquiry</button></form></div>
+</section>
+</main>
+
+<footer><div><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"><p>Handcrafted candles & personalized gifts in the UAE.</p></div><div class="footer-nav"><a href="#shop">Shop</a><a href="#personalize">Custom</a><a href="#gifting">Gifting</a><a href="#contact">Contact</a></div><div><p>Instagram • Facebook • TikTok</p><small>© <span id="year"></span> MG Crafted Candles</small></div></footer>
+
+<div id="productModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><div id="productDetail"></div></div></div>
+<div id="customModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow">CUSTOM CANDLE</span><h2>Make it <em>personal.</em></h2><form id="customForm"><input name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required><select name="occasion" id="customOccasion" required><option value="">Occasion</option><option>Birthday</option><option>Wedding</option><option>Baby Shower</option><option>Corporate</option><option>Other</option></select><input name="quantity" type="number" min="1" placeholder="Quantity" required><select name="fragrance" id="customFragrance" required><option value="">Fragrance preference</option><option>Cozy</option><option>Fresh</option><option>Sweet</option><option>Floral</option><option>Earthy</option><option>Not sure — help me choose</option></select><input name="personalization" placeholder="Name / date / message / branding"><textarea name="details" rows="4" placeholder="Tell us about your candle idea"></textarea><button class="btn dark" type="submit">Send custom request on WhatsApp</button></form></div></div>
+
+<aside id="bag" class="bag"><div class="bag-head"><h3>Your bag</h3><button id="closeBag">×</button></div><div id="bagItems"></div><div class="bag-bottom"><div><span>Subtotal</span><b id="subtotal">AED 0</b></div><label>Delivery<select id="delivery"><option value="20">Dubai — AED 20</option><option value="30">Other Emirates — AED 30</option><option value="0">Pickup — AED 0</option></select></label><div><span>Total</span><b id="total">AED 20</b></div><button id="whatsappCheckout" class="btn dark">Order via WhatsApp</button><small>Online payment can be connected after you choose your payment provider.</small></div></aside>
+<div id="shade"></div>
+<script src="script.js"></script>
+</body>
+</html>
