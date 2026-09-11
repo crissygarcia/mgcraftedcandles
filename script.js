@@ -71,8 +71,8 @@ $$("#nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
 
 const collectionInfo={
  ready:{eyebrow:"READY-MADE CANDLES",title:"Quiet rituals for every day.",intro:"Our ready-made lineup is being revised — updated photos and pieces are on the way.",cover:"assets/ready-made/cover.jpg"},
- personalized:{eyebrow:"PERSONALIZED GIFTS",title:"Details made just for them.",intro:"Custom label, scent and message options will be added here. Photos coming soon.",cover:"assets/personalized/cover.jpg"},
- celebration:{eyebrow:"CELEBRATION FAVORS",title:"For weddings, birthdays, baby showers and more.",intro:"Event favor bundles and packaging options will be added here. Photos coming soon.",cover:"assets/celebration/cover.jpg"}
+ personalized:{eyebrow:"PERSONALIZED GIFTS",title:"Details made just for them.",intro:"Custom label, scent and message options will be added here. Photos coming soon."},
+ celebration:{eyebrow:"CELEBRATION FAVORS",title:"For weddings, birthdays, baby showers and more.",intro:"Event favor bundles and packaging options will be added here. Photos coming soon."}
 };
 function openCollection(key){
  const info=collectionInfo[key];if(!info)return;
