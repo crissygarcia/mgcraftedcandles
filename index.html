@@ -32,29 +32,37 @@
 
 <main id="home">
 <section class="hero">
+  <div class="hero-visual">
+    <img class="hero-photo" src="assets/hero/cover.jpg" alt="MG Crafted Candles — Sakura, Black Ice and Sandalwood scented candles">
+  </div>
   <div class="hero-content">
     <span class="eyebrow">MG CRAFTED CANDLES • UAE</span>
     <h1>Gifts that feel<br><em>made for them.</em></h1>
     <p>Handcrafted candles, personalized fragrances and thoughtful gifting for birthdays, weddings, baby showers, corporate events and everyday moments.</p>
     <div class="hero-buttons"><a class="btn dark" href="#shop">Shop candles</a><a class="btn light" href="#personalize">Create a custom gift</a></div>
-    <div class="mini-trust"><span>✓ Handpoured</span><span>✓ Personalization</span><span>✓ UAE delivery</span></div>
+    <div class="mini-trust"><span>✓ Handpoured</span><span>✓ Personalization</span><span>✓ Event gifting</span><span>✓ UAE delivery</span></div>
   </div>
 </section>
 
-<section class="usp-strip">
-  <div><strong>Personalized</strong><span>Names, dates & messages</span></div>
-  <div><strong>Fragrance choice</strong><span>Choose your scent profile</span></div>
-  <div><strong>Event gifting</strong><span>Small & bulk orders</span></div>
-  <div><strong>UAE delivery</strong><span>Local delivery options</span></div>
-</section>
-
-<section class="collection-showcase" id="shop" aria-labelledby="collection-showcase-title">
-  <div class="collection-showcase-heading"><span class="eyebrow">THE COLLECTION</span><h2 id="collection-showcase-title">Made for gifting,<br>and keeping.</h2></div>
+<section class="collection-showcase" id="collections" aria-labelledby="collection-showcase-title">
+  <div class="collection-showcase-heading"><span class="eyebrow">THE COLLECTION</span><h2 id="collection-showcase-title">Made for gifting,<br>and keeping.</h2><p class="handmade-badge">Handmade individually — small variations are part of the charm.</p></div>
   <div class="collection-showcase-cards">
-    <article><span class="collection-art blush"></span><h3>Ready-made candles</h3><p>Quiet rituals for every day.</p></article>
-    <article><span class="collection-art sand"></span><h3>Personalized gifts</h3><p>Details made just for them.</p></article>
-    <article><span class="collection-art teal"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
+    <article data-collection="ready" role="button" tabindex="0"><span class="collection-art blush has-photo" style="background-image:url('assets/ready-made/cover.jpg')"></span><h3>Ready-made candles</h3><p>Quiet rituals for every day.</p></article>
+    <article data-collection="personalized" role="button" tabindex="0"><span class="collection-art sand has-photo" style="background-image:url('assets/personalized/cover.jpg')"></span><h3>Personalized gifts</h3><p>Details made just for them.</p></article>
+    <article data-collection="celebration" role="button" tabindex="0"><span class="collection-art teal has-photo" style="background-image:url('assets/celebration/cover.jpg')"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
   </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="heading-row"><div><span class="eyebrow">SHOP</span><h2>Ready-made candles</h2></div><p class="muted">Add to your bag and check out instantly via WhatsApp. Example products below — swap in your real photos and prices anytime.</p></div>
+  <div class="filter-row">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="best">Bestsellers</button>
+    <button class="filter" data-filter="gift">Gifting</button>
+    <button class="filter" data-filter="floral">Floral</button>
+    <button class="filter" data-filter="cozy">Cozy</button>
+  </div>
+  <div class="products" id="products"></div>
 </section>
 
 <section class="section personalization" id="personalize">
@@ -65,22 +73,6 @@
     <div class="check-list"><span>✓ Choose a fragrance mood</span><span>✓ Add a name, date or message</span><span>✓ Select your occasion</span><span>✓ Request quantities for events</span></div>
     <div class="custom-order-callout"><button class="btn dark" id="customBtn">Start a custom order</button></div>
   </div>
-  <div class="personalize-art">
-    <div class="custom-tag">YOUR NAME<br><small>YOUR DATE</small></div>
-    <div class="custom-jar"><span>MG</span><strong>MADE<br>FOR YOU</strong><small>handcrafted candle</small></div>
-  </div>
-</section>
-
-<section class="section fragrance-section">
-  <div class="heading-row"><div><span class="eyebrow">FRAGRANCE MENU</span><h2>Choose your mood</h2></div><p class="muted">Custom orders can be matched to your preferred profile.</p></div>
-  <div class="fragrance-grid">
-    <button data-fragrance="Cozy"><i>☕</i><strong>Cozy</strong><span>Vanilla • mocha • amber</span></button>
-    <button data-fragrance="Fresh"><i>✦</i><strong>Fresh</strong><span>Linen • citrus • eucalyptus</span></button>
-    <button data-fragrance="Sweet"><i>♡</i><strong>Sweet</strong><span>Strawberry • sugar • soft florals</span></button>
-    <button data-fragrance="Floral"><i>❀</i><strong>Floral</strong><span>Rose • jasmine • peony</span></button>
-    <button data-fragrance="Earthy"><i>⌁</i><strong>Earthy</strong><span>Sandalwood • cedar • botanicals</span></button>
-  </div>
-  <div id="fragranceTip" class="fragrance-tip">Selected: <b>Cozy</b> — a warm, comforting direction.</div>
 </section>
 
 <section class="section" id="gifting">
@@ -108,7 +100,9 @@
 
   <div class="story-copy">
     <span class="eyebrow">OUR STORY</span>
-    <h2 id="our-story-title">Handcrafted with a<br class="story-break"> little bit of <em>heart.</em></h2>
+    <h2 id="our-story-title">Handcrafted with <em>you</em><br class="story-break"> in mind.</h2>
+
+    <p class="story-lede">Every candle is one of a kind — shaped by hand, so no two ever turn out quite the same.</p>
 
     <p>MG Crafted Candles is built around the idea that a candle can be more than home fragrance<br class="desktop-only"> — it can become a memory, a thank-you, a celebration or a little reminder of someone special.</p>
 
@@ -132,10 +126,11 @@
 </section>
 </main>
 
-<footer><div><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"><p>Handcrafted candles & personalized gifts in the UAE.</p></div><div class="footer-nav"><a href="#shop">Shop</a><a href="#personalize">Custom</a><a href="#gifting">Gifting</a><a href="#contact">Contact</a></div><div><p>Instagram • Facebook • TikTok</p><small>© <span id="year"></span> MG Crafted Candles</small></div></footer>
+<footer><div><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"><p>Handcrafted candles & personalized gifts in the UAE.</p></div><div class="footer-nav"><a href="#shop">Shop</a><a href="#personalize">Custom</a><a href="#gifting">Gifting</a><a href="#contact">Contact</a></div><div><p><a href="https://www.instagram.com/mgcraftedcandles?stkn=MWhtbG95aDVqdHExbg%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> • Facebook • TikTok</p><small>© <span id="year"></span> MG Crafted Candles</small></div></footer>
 
 <div id="productModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><div id="productDetail"></div></div></div>
-<div id="customModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow">CUSTOM CANDLE</span><h2>Make it <em>personal.</em></h2><form id="customForm"><input name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required><select name="occasion" id="customOccasion" required><option value="">Occasion</option><option>Birthday</option><option>Wedding</option><option>Baby Shower</option><option>Corporate</option><option>Other</option></select><input name="quantity" type="number" min="1" placeholder="Quantity" required><select name="fragrance" id="customFragrance" required><option value="">Fragrance preference</option><option>Cozy</option><option>Fresh</option><option>Sweet</option><option>Floral</option><option>Earthy</option><option>Not sure — help me choose</option></select><input name="personalization" placeholder="Name / date / message / branding"><textarea name="details" rows="4" placeholder="Tell us about your candle idea"></textarea><button class="btn dark" type="submit">Send custom request on WhatsApp</button></form></div></div>
+<div id="collectionModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow" id="collectionModalEyebrow">CATEGORY</span><h2 id="collectionModalTitle">Options</h2><img id="collectionModalCover" class="collection-cover" style="display:none" alt=""><p id="collectionModalIntro" class="muted"></p><div class="collection-options" id="collectionModalOptions"></div></div></div>
+<div id="customModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow">CUSTOM CANDLE</span><h2>Make it <em>personal.</em></h2><form id="customForm"><input name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required><select name="occasion" id="customOccasion" required><option value="">Occasion</option><option>Birthday</option><option>Wedding</option><option>Baby Shower</option><option>Corporate</option><option>Other</option></select><input name="quantity" type="number" min="1" placeholder="Quantity" required><select name="fragrance" id="customFragrance"><option value="">Fragrance preference (optional)</option><option>Cozy</option><option>Fresh</option><option>Sweet</option><option>Floral</option><option>Earthy</option><option>Not sure — help me choose</option></select><input name="personalization" placeholder="Name / date / message / branding"><textarea name="details" rows="4" placeholder="Tell us about your candle idea"></textarea><button class="btn dark" type="submit">Send custom request on WhatsApp</button></form></div></div>
 
 <aside id="bag" class="bag"><div class="bag-head"><h3>Your bag</h3><button id="closeBag">×</button></div><div id="bagItems"></div><div class="bag-bottom"><div><span>Subtotal</span><b id="subtotal">AED 0</b></div><label>Delivery<select id="delivery"><option value="20">Dubai — AED 20</option><option value="30">Other Emirates — AED 30</option><option value="0">Pickup — AED 0</option></select></label><div><span>Total</span><b id="total">AED 20</b></div><button id="whatsappCheckout" class="btn dark">Order via WhatsApp</button><small>Online payment can be connected after you choose your payment provider.</small></div></aside>
 <div id="shade"></div>
