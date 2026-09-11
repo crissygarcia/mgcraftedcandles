@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER="971500000000"; // Replace with your UAE WhatsApp Business number, digits only.
+const WHATSAPP_NUMBER="971527760547"; // MG Crafted Candles WhatsApp Business number.
 
 const products=[
 {id:1,name:"Warm Vanilla",desc:"Vanilla • amber • cozy woods",price:65,tag:"BESTSELLER",cats:["best","gift","cozy"],details:"A soft, comforting scent designed for cozy evenings and easy gifting."},
@@ -69,22 +69,41 @@ $("#searchInput").oninput=e=>{const q=e.target.value.toLowerCase();renderProduct
 $("#menuBtn").onclick=()=>$("#nav").classList.toggle("open");
 $$("#nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
 
-const fragranceMessages={
-Cozy:"warm, comforting and inviting",Fresh:"clean, airy and refreshing",Sweet:"playful, soft and delicious",Floral:"elegant, romantic and botanical",Earthy:"calm, grounded and woody"
+const collectionInfo={
+ ready:{eyebrow:"READY-MADE CANDLES",title:"Quiet rituals for every day.",intro:"Our ready-made lineup is being revised — updated photos and pieces are on the way.",cover:"assets/ready-made/cover.jpg"},
+ personalized:{eyebrow:"PERSONALIZED GIFTS",title:"Details made just for them.",intro:"Custom label, scent and message options will be added here. Photos coming soon.",cover:"assets/personalized/cover.jpg"},
+ celebration:{eyebrow:"CELEBRATION FAVORS",title:"For weddings, birthdays, baby showers and more.",intro:"Event favor bundles and packaging options will be added here. Photos coming soon.",cover:"assets/celebration/cover.jpg"}
 };
-$$("[data-fragrance]").forEach(b=>b.onclick=()=>{
- $$("[data-fragrance]").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");
- const f=b.dataset.fragrance;$("#fragranceTip").innerHTML=`Selected: <b>${f}</b> — ${fragranceMessages[f]}.`;
- $("#customFragrance").value=f;
+function openCollection(key){
+ const info=collectionInfo[key];if(!info)return;
+ $("#collectionModalEyebrow").textContent=info.eyebrow;
+ $("#collectionModalTitle").textContent=info.title;
+ $("#collectionModalIntro").textContent=info.intro;
+ const cover=$("#collectionModalCover");
+ if(info.cover){cover.src=info.cover;cover.alt=info.title;cover.style.display="block";}else{cover.style.display="none";cover.removeAttribute("src");}
+ const box=$("#collectionModal .modal-box");
+ if(info.photos){
+  box.classList.add("wide");
+  $("#collectionModalOptions").className="collection-photo-grid";
+  $("#collectionModalOptions").innerHTML=info.photos.map(name=>`<a href="assets/ready-made/${name}.jpg" target="_blank"><img src="assets/ready-made/${name}.jpg" alt="${info.title}" loading="lazy"></a>`).join("");
+ } else {
+  box.classList.remove("wide");
+  $("#collectionModalOptions").className="collection-options";
+  $("#collectionModalOptions").innerHTML=Array.from({length:3}).map((_,i)=>`<div class="collection-option-slot"><span class="plus">+</span><span>Option ${i+1}<br>photo &amp; details coming soon</span></div>`).join("");
+ }
+ $("#collectionModal").classList.add("show");
+}
+$$("[data-collection]").forEach(card=>{
+ card.onclick=()=>openCollection(card.dataset.collection);
+ card.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCollection(card.dataset.collection);}};
 });
-
 function openCustom(occasion=""){ $("#customModal").classList.add("show");if(occasion)$("#customOccasion").value=occasion; }
 $("#customBtn").onclick=()=>openCustom();
 $$("[data-occasion]").forEach(b=>b.onclick=()=>openCustom(b.dataset.occasion));
 
 $("#customForm").onsubmit=e=>{
  e.preventDefault();const d=new FormData(e.target);
- wa(`Hello MG Crafted Candles!%0A%0ACUSTOM ORDER REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AOccasion: ${d.get("occasion")}%0AQuantity: ${d.get("quantity")}%0AFragrance: ${d.get("fragrance")}%0APersonalization: ${d.get("personalization")}%0ADetails: ${d.get("details")}`);
+ wa(`Hello MG Crafted Candles!%0A%0ACUSTOM ORDER REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AOccasion: ${d.get("occasion")}%0AQuantity: ${d.get("quantity")}%0AFragrance: ${d.get("fragrance")||"No preference"}%0APersonalization: ${d.get("personalization")}%0ADetails: ${d.get("details")}`);
 };
 $("#contactForm").onsubmit=e=>{
  e.preventDefault();const d=new FormData(e.target);
