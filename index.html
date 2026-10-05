@@ -32,8 +32,21 @@
 
 <main id="home">
 <section class="hero">
-  <div class="hero-visual">
-    <img class="hero-photo" src="assets/hero/hero-cover.jpg" alt="MG Crafted Candles — Sakura, Black Ice and Sandalwood scented candles">
+  <div class="hero-visual" id="heroCarousel">
+    <img class="hero-photo active" src="assets/hero/slide-1-periwinkle.jpg" alt="MG Crafted Candles — periwinkle daisy candle">
+    <img class="hero-photo" src="assets/hero/slide-2-sage.jpg" alt="MG Crafted Candles — sage daisy candle">
+    <img class="hero-photo" src="assets/hero/slide-3-rose.jpg" alt="MG Crafted Candles — rose daisy candle">
+    <img class="hero-photo" src="assets/hero/slide-4-ivory.jpg" alt="MG Crafted Candles — ivory daisy candle">
+    <img class="hero-photo" src="assets/hero/slide-5-gold.jpg" alt="MG Crafted Candles — gold daisy candle">
+    <button class="hero-arrow prev" type="button" aria-label="Previous slide">‹</button>
+    <button class="hero-arrow next" type="button" aria-label="Next slide">›</button>
+    <div class="hero-dots">
+      <button class="hero-dot active" type="button" aria-label="Slide 1"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 2"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 3"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 4"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 5"></button>
+    </div>
   </div>
   <div class="hero-content">
     <span class="eyebrow">MG CRAFTED CANDLES • UAE</span>
@@ -49,7 +62,7 @@
   <div class="collection-showcase-cards">
     <article data-collection="ready" role="button" tabindex="0"><span class="collection-art blush has-photo" style="background-image:url('assets/ready-made/ready-made-cover.jpg')"></span><h3>Ready-made candles</h3><p>Quiet rituals for every day.</p></article>
     <article data-collection="personalized" role="button" tabindex="0"><span class="collection-art sand has-photo" style="background-image:url('assets/personalized/personalized-cover.jpg')"></span><h3>Personalized gifts</h3><p>Details made just for them.</p></article>
-    <article data-collection="celebration" role="button" tabindex="0"><span class="collection-art teal has-photo" style="background-image:url('assets/celebration/celebration-cover.jpg')"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
+    <article data-collection="celebration" role="button" tabindex="0"><span class="collection-art teal has-photo" style="background-image:url('assets/hero/slide-5-gold.jpg')"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
   </div>
 </section>
 
@@ -73,6 +86,7 @@
     <div class="check-list"><span>✓ Choose a fragrance mood</span><span>✓ Add a name, date or message</span><span>✓ Select your occasion</span><span>✓ Request quantities for events</span></div>
     <div class="custom-order-callout"><button class="btn dark" id="customBtn">Start a custom order</button></div>
   </div>
+  <div class="personalize-art"></div>
 </section>
 
 <section class="section" id="gifting">

@@ -7,8 +7,9 @@
 /* Strong, palette-matched callout for the custom-order action. */
 .custom-order-callout{display:inline-block;padding:7px;background:var(--sand);border:1px solid var(--gold)}.custom-order-callout .btn{display:block;border:0;border-radius:0;background:var(--ink);color:#fff;padding:15px 24px;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.custom-order-callout .btn:hover{background:var(--gold)}
 
-/* The hero is intentionally clear until an approved product photograph is supplied. */
-.hero{grid-template-columns:1fr;min-height:0;text-align:center}.hero-content{max-width:700px;margin:auto}.hero-content>p{margin-left:auto;margin-right:auto}.hero-buttons,.mini-trust{justify-content:center}
+/* Hero now carries the approved daisy-candle carousel, so the earlier
+   text-only centered treatment no longer applies. Two-column layout
+   (carousel left, copy right) is defined in styles.css. */
 
 @media(max-width:900px){.collection-showcase-cards{grid-template-columns:1fr}.collection-art{aspect-ratio:1.8/1}.gift-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.collection-showcase{padding:70px 6%}.gift-grid{grid-template-columns:1fr}}

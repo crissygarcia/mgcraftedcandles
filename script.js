@@ -1,5 +1,50 @@
 const WHATSAPP_NUMBER="971527760547"; // MG Crafted Candles WhatsApp Business number.
 
+(function heroCarousel(){
+ function init(){
+  const root=document.getElementById("heroCarousel");
+  if(!root)return;
+  const slides=[].slice.call(root.querySelectorAll(".hero-photo"));
+  const dots=[].slice.call(root.querySelectorAll(".hero-dot"));
+  if(slides.length<2)return;
+  let i=0,timer=null;
+  function show(n){
+   const next=(n%slides.length+slides.length)%slides.length;
+   slides.forEach((s,k)=>s.classList.toggle("active",k===next));
+   dots.forEach((d,k)=>d.classList.toggle("active",k===next));
+   i=next;
+  }
+  function start(){stop();timer=setInterval(function(){show(i+1);},4500);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function go(n){show(n);start();}
+
+  dots.forEach(function(d,n){d.addEventListener("click",function(e){e.preventDefault();go(n);});});
+  const prev=root.querySelector(".hero-arrow.prev");
+  const next=root.querySelector(".hero-arrow.next");
+  if(prev)prev.addEventListener("click",function(e){e.preventDefault();go(i-1);});
+  if(next)next.addEventListener("click",function(e){e.preventDefault();go(i+1);});
+
+  // swipe / drag
+  let x0=null;
+  function down(x){x0=x;stop();}
+  function up(x){
+   if(x0===null)return;
+   const dx=x-x0;x0=null;
+   if(Math.abs(dx)>40){show(dx<0?i+1:i-1);}
+   start();
+  }
+  root.addEventListener("touchstart",function(e){down(e.touches[0].clientX);},{passive:true});
+  root.addEventListener("touchend",function(e){up(e.changedTouches[0].clientX);},{passive:true});
+  root.addEventListener("mousedown",function(e){down(e.clientX);});
+  root.addEventListener("mouseup",function(e){up(e.clientX);});
+  root.addEventListener("mouseleave",function(){if(x0!==null){x0=null;start();}});
+
+  show(0);
+  start();
+ }
+ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
+})();
+
 const products=[
 {id:1,name:"Warm Vanilla",desc:"Vanilla • amber • cozy woods",price:65,tag:"BESTSELLER",cats:["best","gift","cozy"],details:"A soft, comforting scent designed for cozy evenings and easy gifting."},
 {id:2,name:"Mocha Latte",desc:"Coffee • cream • warm sweetness",price:70,tag:"NEW",cats:["best","cozy"],details:"A warm coffee-inspired candle with creamy sweetness."},
