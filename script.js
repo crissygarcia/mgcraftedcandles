@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER="971527760547"; // MG Crafted Candles WhatsApp Business number.
+const WHATSAPP_NUMBER="971527760547"; // MG Crafted Creations WhatsApp Business number.
 
 (function heroCarousel(){
  function init(){
@@ -93,7 +93,7 @@ $("#whatsappCheckout").onclick=()=>{
  if(!cart.length){alert("Your bag is empty.");return}
  const d=Number($("#delivery").value), sub=cart.reduce((s,x)=>s+x.price*x.qty,0);
  const lines=cart.map(x=>`${x.name} x${x.qty} — AED ${x.price*x.qty}`).join("%0A");
- wa(`Hello MG Crafted Candles!%0A%0AI'd like to order:%0A${lines}%0A%0ASubtotal: AED ${sub}%0ADelivery: AED ${d}%0ATotal: AED ${sub+d}%0A%0APlease confirm availability and delivery details.`);
+ wa(`Hello MG Crafted Creations!%0A%0AI'd like to order:%0A${lines}%0A%0ASubtotal: AED ${sub}%0ADelivery: AED ${d}%0ATotal: AED ${sub+d}%0A%0APlease confirm availability and delivery details.`);
 };
 
 function showProduct(id){
@@ -148,11 +148,11 @@ $$("[data-occasion]").forEach(b=>b.onclick=()=>openCustom(b.dataset.occasion));
 
 $("#customForm").onsubmit=e=>{
  e.preventDefault();const d=new FormData(e.target);
- wa(`Hello MG Crafted Candles!%0A%0ACUSTOM ORDER REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AOccasion: ${d.get("occasion")}%0AQuantity: ${d.get("quantity")}%0AFragrance: ${d.get("fragrance")||"No preference"}%0APersonalization: ${d.get("personalization")}%0ADetails: ${d.get("details")}`);
+ wa(`Hello MG Crafted Creations!%0A%0ACUSTOM ORDER REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AOccasion: ${d.get("occasion")}%0AQuantity: ${d.get("quantity")}%0AFragrance: ${d.get("fragrance")||"No preference"}%0APersonalization: ${d.get("personalization")}%0ADetails: ${d.get("details")}`);
 };
 $("#contactForm").onsubmit=e=>{
  e.preventDefault();const d=new FormData(e.target);
- wa(`Hello MG Crafted Candles!%0A%0AINQUIRY%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AEmail: ${d.get("email")}%0AOccasion: ${d.get("occasion")}%0AMessage: ${d.get("message")}`);
+ wa(`Hello MG Crafted Creations!%0A%0AINQUIRY%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AEmail: ${d.get("email")}%0AOccasion: ${d.get("occasion")}%0AMessage: ${d.get("message")}`);
 };
 $("#year").textContent=new Date().getFullYear();
 renderBag();

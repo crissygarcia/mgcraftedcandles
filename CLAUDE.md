@@ -1,4 +1,4 @@
-# MG Crafted Candles — Project Context
+# MG Crafted Creations — Project Context
 
 ## Business
 Handmade candle business based in the UAE (Dubai), run by Crissy. Two niches: ready-made candles and fully customizable candles, with a focus on event gifting (weddings, baby showers, corporate gifting, birthdays, retreats, holidays). Key differentiator: personalized labels on each candle.
@@ -29,7 +29,7 @@ Defined as CSS variables at the top of `styles.css`, documented inline:
 - Light Line `#DEDBD3` → `--line`
 
 ## Assets folder structure
-- `assets/mg-crafted-candles-logo.png` — real logo, used in header/footer/Our Story
+- `assets/mg-crafted-creations-logo.png` — real logo, used in header/footer/Our Story
 - `assets/hero/cover.jpg` — hero banner photo (left column, two-column layout: photo left, text right)
 - `assets/ready-made/cover.jpg` — current cover photo for the "Ready-made candles" collection card + modal banner
 - `assets/ready-made/*.jpg` (other files) — an earlier batch of 10 converted product photos (daisy candles in 5 colorways, rose/succulent flat-lay, palace-relief candle, cactus candles, sunset lifestyle shot). Currently **unlinked** from the site — Crissy asked to remove them from the Ready-made tab pending a revised/curated set. Files are kept on disk in case she wants to reuse any.

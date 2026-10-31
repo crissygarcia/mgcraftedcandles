@@ -1,6 +1,6 @@
-# MG Crafted Candles — UAE E-commerce Starter v2
+# MG Crafted Creations — UAE E-commerce Starter v2
 
-This revised version uses the requested code-built website format. `mg-crafted-candles-logo.png` is the locked master logo and is used unchanged in the header, footer, and Our Story gold-outline circle. The ready-made product collection, Events & Bulk Orders, and Kind Words sections are omitted for this startup version. The collection showcase remains, including birthday and baby-shower favors. Personalized Gifting includes a fifth tile for any customer occasion.
+This revised version uses the requested code-built website format. `mg-crafted-creations-logo.png` is the locked master logo and is used unchanged in the header, footer, and Our Story gold-outline circle. The ready-made product collection, Events & Bulk Orders, and Kind Words sections are omitted for this startup version. The collection showcase remains, including birthday and baby-shower favors. Personalized Gifting includes a fifth tile for any customer occasion.
 
 ## Included
 - Premium responsive design
@@ -18,7 +18,7 @@ This revised version uses the requested code-built website format. `mg-crafted-c
 - Bulk-order inquiry
 - Search
 - FAQ, reviews, story and delivery sections
-- Original MG Crafted Candles logo
+- Original MG Crafted Creations logo
 
 ## IMPORTANT BEFORE LAUNCH
 Open `script.js` and replace:
