@@ -3,19 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MG Crafted Candles — premium handcrafted candles, personalized gifts, wedding favors, baby shower favors and corporate gifting in the UAE.">
-<title>MG Crafted Candles | Handcrafted & Personalized in UAE</title>
+<meta name="description" content="MG Crafted Creations — premium handcrafted candles, personalized gifts, wedding favors, baby shower favors and corporate gifting in the UAE.">
+<title>MG Crafted Creations | Handcrafted & Personalized in UAE</title>
+<link rel="canonical" href="https://mgcraftedcreations.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MG Crafted Creations">
+<meta property="og:title" content="MG Crafted Creations | Handcrafted & Personalized in UAE">
+<meta property="og:url" content="https://mgcraftedcreations.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="locked-revisions.css">
+<style>
+/* MG Crafted Candles — LOCKED brand palette. Do not change these hex values.
+   Deep Teal #274C4E → --ink | Dark Teal #173B3D → --dark
+   Warm Cream #F8F4EC → --cream | Soft Sand #E6D7C0 → --sand
+   Muted Gold #B68A52 → --gold | Soft Rose #EAD8D4 → --rose
+   Text Teal #1D3233 → --text | Muted Gray-Green #6D7977 → --muted
+   Light Line #DEDBD3 → --line */
+:root{--ink:#274c4e;--dark:#173b3d;--cream:#f8f4ec;--sand:#e6d7c0;--gold:#b68a52;--rose:#ead8d4;--text:#1d3233;--muted:#6d7977;--line:#dedbd3;--white:#fff;--shadow:0 18px 60px rgba(23,59,61,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.55;background:#fff}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.topbar{background:var(--dark);color:#fff;text-align:center;padding:8px;font-size:10px;letter-spacing:.18em}.header{height:84px;padding:10px 6%;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:30;border-bottom:1px solid #eee}.logo img{width:120px;height:60px;object-fit:contain}.header nav{display:flex;gap:28px;font-size:13px;font-weight:600}.header nav a:hover{color:var(--gold)}.header-actions{display:flex;align-items:center;gap:8px}.icon-btn,.menu-btn{border:0;background:none;font-size:23px;cursor:pointer}.bag-btn{border:1px solid var(--ink);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer}.bag-btn b{display:inline-grid;place-items:center;background:var(--ink);color:#fff;width:20px;height:20px;border-radius:50%;font-size:10px;margin-left:4px}.menu-btn{display:none}.search-panel{display:none;background:var(--cream);padding:14px 6%}.search-panel.show{display:block}.search-panel input{width:100%;padding:13px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;outline:none}
+.hero{background:var(--cream);min-height:650px;padding:85px 8%;display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:60px}.hero-content{max-width:680px}.eyebrow{font-size:10px;letter-spacing:.2em;font-weight:700;color:var(--gold)}h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;line-height:1.08}h1{font-size:clamp(50px,6vw,82px);margin:13px 0}h2{font-size:clamp(38px,4.5vw,58px);margin:10px 0}em{color:var(--gold)}p{color:var(--muted)}.hero-content>p{font-size:18px;max-width:600px}.btn{border:1px solid var(--ink);border-radius:999px;padding:12px 21px;font-weight:700;cursor:pointer;display:inline-block}.btn.dark{background:var(--ink);color:#fff}.btn.light{background:#fff}.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}.mini-trust{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;font-weight:600;margin-top:28px}.hero-visual{height:480px;position:relative;border-radius:20px;overflow:hidden;box-shadow:25px 30px 50px rgba(36,58,55,.18);touch-action:pan-y}.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s ease;user-select:none;-webkit-user-drag:none;will-change:transform,opacity;animation:kb-zoom 16s ease-in-out infinite alternate}.hero-photo:nth-of-type(2){animation-name:kb-pan-l;animation-duration:18s}.hero-photo:nth-of-type(3){animation-name:kb-pan-r;animation-duration:15s}.hero-photo:nth-of-type(4){animation-name:kb-zoom-out;animation-duration:17s}.hero-photo:nth-of-type(5){animation-name:kb-pan-l;animation-duration:14s}
+@keyframes kb-zoom{from{transform:scale(1.03)}to{transform:scale(1.15)}}
+@keyframes kb-zoom-out{from{transform:scale(1.15)}to{transform:scale(1.03)}}
+@keyframes kb-pan-l{from{transform:scale(1.12) translate(1.8%,.6%)}to{transform:scale(1.12) translate(-1.8%,-.6%)}}
+@keyframes kb-pan-r{from{transform:scale(1.12) translate(-1.8%,-.6%)}to{transform:scale(1.12) translate(1.8%,.6%)}}
+@media(prefers-reduced-motion:reduce){.hero-photo{animation:none;transform:scale(1.03)}}.hero-photo.active{opacity:1}.hero-dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:2px;z-index:3}.hero-dot{width:26px;height:26px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}.hero-dot:before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 1px 3px rgba(0,0,0,.35);transition:background .2s ease,transform .2s ease}.hero-dot.active:before{background:#fff;transform:scale(1.35)}.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.82);color:var(--ink);font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;opacity:0;transition:opacity .25s ease,background .2s ease;-webkit-tap-highlight-color:transparent}.hero-arrow:hover{background:#fff}.hero-arrow.prev{left:14px}.hero-arrow.next{right:14px}.hero-visual:hover .hero-arrow,.hero-arrow:focus-visible{opacity:1}@media(hover:none){.hero-arrow{opacity:.9}}
+.section{padding:95px 8%}.heading-row{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.heading-row.centered{display:block;text-align:center}.heading-row.centered p{max-width:620px;margin:10px auto}.muted{font-size:12px;color:var(--muted)}.filter-row{display:flex;gap:8px;margin-bottom:25px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;padding:8px 15px;border-radius:999px;font-size:12px;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product-card{position:relative}.product-photo{height:350px;background:var(--cream);display:grid;place-items:center;position:relative;overflow:hidden}.product-photo .jar{width:135px;height:175px;background:var(--ink);border-radius:9px 9px 20px 20px;box-shadow:0 25px 35px rgba(23,59,61,.18);display:grid;place-items:center;color:#fff;font:600 24px "Playfair Display"}.product-card:nth-child(2) .jar{background:var(--sand)}.product-card:nth-child(3) .jar{background:var(--rose)}.product-card:nth-child(4) .jar{background:#6d8782}.product-card:nth-child(5) .jar{background:#9c7b59}.product-card:nth-child(6) .jar{background:#cdaaa6}.product-card:nth-child(7) .jar{background:#5d7774}.product-card:nth-child(8) .jar{background:#aa8c65}.tag{position:absolute;left:12px;top:12px;background:#fff;padding:5px 8px;font-size:9px;font-weight:700;letter-spacing:.1em}.product-info{padding:15px 2px}.product-info h3{font-size:22px;margin:0}.product-info p{font-size:12px;margin:4px 0 11px}.product-bottom{display:flex;justify-content:space-between;align-items:center}.price{font-weight:700}.product-buttons{display:flex;gap:6px}.mini-btn{border:1px solid var(--ink);background:#fff;border-radius:999px;padding:7px 10px;font-size:10px;cursor:pointer}.mini-btn.dark{background:var(--ink);color:#fff}.personalization{background:var(--ink);color:#fff;border-radius:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}.personalize-copy p{color:#d4dfdd;max-width:540px}.personalize-copy .eyebrow{color:#d7b77d}.personalize-copy h2{color:#fff}.check-list{display:grid;gap:8px;margin:25px 0;color:#dce5e2;font-size:13px}.personalize-art{height:430px;border-radius:18px;background:rgba(255,255,255,.06);border:1.5px dashed rgba(255,255,255,.25)}.gift-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.gift-grid article{border:1px solid var(--line);padding:30px 24px;min-height:265px;transition:.2s}.gift-grid article:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.gift-grid article>span{color:var(--gold);font-size:11px;font-weight:700}.gift-grid h3{font-size:26px;margin:18px 0 6px}.gift-grid p{font-size:13px}.text-btn{border:0;background:none;padding:0;font-weight:700;color:var(--ink);cursor:pointer;font-size:12px}.event-banner{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.event-points{background:#fff;padding:10px 28px}.event-points div{padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.event-points div b{font:600 17px "Playfair Display"}.event-points small{color:var(--muted);font-size:11px;text-align:right}.event-points .btn{margin:20px 0 10px}.delivery{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.delivery-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.delivery-cards div{border:1px solid var(--line);padding:22px;background:#fff}.delivery-cards strong,.delivery-cards span,.delivery-cards b{display:block}.delivery-cards strong{font:600 20px "Playfair Display"}.delivery-cards span{font-size:11px;color:var(--muted)}.delivery-cards b{font-size:12px;margin-top:15px;color:var(--gold)}.about{display:grid;grid-template-columns:.65fr 1.35fr;gap:80px;align-items:center;background:var(--cream)}.about-logo{width:260px;height:260px;border-radius:50%;border:2px solid var(--gold);background:transparent;display:grid;place-items:center;margin:auto;padding:28px}.about-logo img{width:100%;height:100%;object-fit:contain;display:block}.about p{max-width:700px}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review-grid blockquote{margin:0;background:var(--cream);padding:28px;font:italic 18px "Playfair Display"}.review-grid cite{display:block;font:11px "DM Sans";color:var(--muted);margin-top:20px}.faq-list{max-width:850px;margin:auto;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:19px 0}summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}summary:after{content:"+";color:var(--gold);font-size:20px}details[open] summary:after{content:"−"}details p{font-size:13px;max-width:700px}.contact{background:var(--dark);color:#fff}.contact-inner{max-width:850px;margin:auto;text-align:center}.contact .eyebrow{color:#d7b77d}.contact h2{color:#fff}.contact-inner>p{color:#c9d4d2}.contact form{display:grid;gap:11px;margin-top:25px;text-align:left}.contact input,.contact select,.contact textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:13px 15px;color:#fff;outline:none}.contact select option{color:#111}.contact input::placeholder,.contact textarea::placeholder{color:#b7c1bf}.two{display:grid;grid-template-columns:1fr 1fr;gap:11px}footer{padding:42px 8%;display:grid;grid-template-columns:1fr auto auto;gap:35px;border-top:1px solid var(--line);align-items:center}footer img{width:120px;height:58px;object-fit:contain}footer p,footer small{font-size:11px;color:var(--muted)}footer p a{color:var(--muted);font-weight:600}footer p a:hover{color:var(--gold)}.footer-nav{display:flex;gap:20px;font-size:12px;font-weight:600}
+.modal{display:none;position:fixed;inset:0;background:rgba(10,30,30,.55);z-index:100;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{background:#fff;width:min(570px,100%);max-height:90vh;overflow:auto;border-radius:20px;padding:38px;position:relative}.close{position:absolute;right:17px;top:10px;border:0;background:none;font-size:28px;cursor:pointer}.modal-box form{display:grid;gap:10px;margin-top:18px}.modal-box input,.modal-box select,.modal-box textarea{width:100%;padding:13px;border:1px solid var(--line);background:#faf7f0;border-radius:9px;color:var(--text)}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.detail-image{height:330px;background:var(--cream);display:grid;place-items:center}.detail-image .jar{width:140px;height:180px;background:var(--ink);border-radius:10px 10px 20px 20px;display:grid;place-items:center;color:#fff;font:600 25px "Playfair Display"}.detail-copy h2{margin:5px 0}.detail-copy .detail-price{font-weight:700;font-size:18px}.detail-copy ul{padding-left:18px;color:var(--muted);font-size:13px}.bag{position:fixed;right:0;top:0;width:min(420px,100%);height:100vh;background:#fff;z-index:90;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;box-shadow:-15px 0 60px rgba(0,0,0,.16)}.bag.open{transform:translateX(0)}.bag-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.bag-head h3{margin:0;font-size:25px}.bag-head button{border:0;background:none;font-size:28px;cursor:pointer}.bag #bagItems{flex:1;overflow:auto;padding:20px}.bag-item{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding:13px 0}.bag-item strong{font-size:13px}.bag-item small{color:var(--muted)}.remove{border:0;background:none;color:#a55;font-size:11px;cursor:pointer}.bag-bottom{padding:20px;border-top:1px solid var(--line);display:grid;gap:12px}.bag-bottom>div{display:flex;justify-content:space-between}.bag-bottom label{font-size:12px}.bag-bottom select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff;margin-top:5px}.bag-bottom small{color:var(--muted);font-size:10px}#shade{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:80}#shade.show{display:block}
+@media(max-width:900px){.header nav{display:none}.header nav.open{display:flex;position:absolute;top:84px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 7%;gap:15px;border-bottom:1px solid var(--line)}.menu-btn{display:block}.hero{grid-template-columns:1fr}.hero-visual{height:420px}.products,.gift-grid{grid-template-columns:repeat(2,1fr)}.event-banner,.delivery,.about,.personalization{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}.personalize-art{height:390px}footer{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.header{height:74px}.logo img{width:105px}.hero{padding:60px 6%;min-height:auto}.section{padding:70px 6%}.hero-visual{height:330px}.products,.gift-grid,.delivery-cards,.two,.detail-grid{grid-template-columns:1fr}.heading-row{display:block}.heading-row .muted{display:block;margin-top:8px}.personalization{padding-top:70px;padding-bottom:70px}.personalize-art{height:330px}.event-points div{display:block}.event-points small{display:block;text-align:left;margin-top:4px}.about-logo{width:190px;height:190px;padding:22px}.footer-nav{flex-wrap:wrap}footer{grid-template-columns:1fr}}
+
+/* MG CRAFTED CANDLES — LOCKED BRAND PALETTE: do not introduce new brand colors without approval. */
+
+/* OUR STORY MONOGRAM: exact supplied MG artwork, typography unchanged. */
+
+
+/* =========================================================
+   MG CRAFTED CANDLES — CODE-BUILT OUR STORY SEGMENT
+   Recreated from the approved reference layout.
+   No screenshot/image is used for the section.
+   ========================================================= */
+
+.about-recreated{
+  min-height:913px;
+  padding:0 8.8%;
+  background:var(--cream);
+  display:grid;
+  grid-template-columns:34% 66%;
+  align-items:center;
+  column-gap:2.6%;
+  overflow:hidden;
+}
+
+.story-mark{
+  width:min(405px,26vw);
+  aspect-ratio:1;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  justify-self:center;
+}
+
+.story-mark span{
+  color:var(--ink);
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(92px,8vw,142px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.075em;
+  transform:translateX(-2px);
+}
+
+.story-copy{
+  align-self:center;
+  padding-bottom:5px;
+}
+
+.story-copy .eyebrow{
+  display:block;
+  margin-bottom:17px;
+  font-size:10px;
+  line-height:1;
+  letter-spacing:.19em;
+  color:var(--gold);
+}
+
+.story-copy h2{
+  color:var(--text);
+  font-family:"Playfair Display",serif;
+  font-size:clamp(47px,4.25vw,74px);
+  font-weight:600;
+  line-height:1.10;
+  letter-spacing:-.025em;
+  margin:0 0 24px;
+}
+
+.story-copy h2 em{
+  color:var(--gold);
+  font-style:italic;
+  font-weight:500;
+}
+
+.story-copy p{
+  color:#667b7d;
+  font-family:"DM Sans",sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  letter-spacing:.005em;
+  margin:0 0 27px;
+  max-width:920px;
+}
+
+.story-copy p:last-child{
+  margin-bottom:0;
+}
+
+.story-copy .story-lede{
+  font:600 28px "Playfair Display",serif;
+  color:var(--gold);
+  letter-spacing:-.02em;
+  line-height:1.25;
+  margin:0 0 22px;
+  max-width:620px;
+}
+
+@media(max-width:1100px){
+  .about-recreated{
+    min-height:720px;
+    grid-template-columns:35% 65%;
+    padding:0 6%;
+  }
+  .story-mark{
+    width:min(330px,28vw);
+  }
+  .story-copy h2{
+    font-size:clamp(39px,4.8vw,58px);
+  }
+  .story-copy p{
+    font-size:14px;
+  }
+}
+
+@media(max-width:800px){
+  .about-recreated{
+    min-height:auto;
+    padding:85px 7% 90px;
+    grid-template-columns:1fr;
+    row-gap:55px;
+    text-align:center;
+  }
+  .story-mark{
+    width:290px;
+    max-width:70vw;
+  }
+  .story-copy{
+    padding:0;
+  }
+  .story-copy .eyebrow{
+    margin-bottom:14px;
+  }
+  .story-copy h2{
+    font-size:clamp(38px,8vw,52px);
+    line-height:1.12;
+  }
+  .story-copy p{
+    max-width:680px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:14px;
+  }
+  .desktop-only{
+    display:none;
+  }
+}
+
+@media(max-width:480px){
+  .about-recreated{
+    padding:70px 6% 75px;
+    row-gap:42px;
+  }
+  .story-mark{
+    width:245px;
+  }
+  .story-mark span{
+    font-size:92px;
+  }
+  .story-copy h2{
+    font-size:35px;
+  }
+}
+
+</style>
+<style>
+/* Approved collection showcase from the previous design. */
+.collection-showcase{background:#fff;padding:95px 8%}.collection-showcase-heading{margin-bottom:46px}.collection-showcase-heading .handmade-badge{margin-top:14px;font-size:13px;color:var(--gold);font-weight:600;letter-spacing:.01em}.collection-showcase h2{font-size:clamp(40px,4.8vw,68px)}.collection-showcase-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.collection-showcase-cards article{margin:0}.collection-art{display:block;aspect-ratio:1/.94;margin-bottom:19px;position:relative}.collection-art:after{content:"";width:37%;height:49%;position:absolute;left:32%;top:27%;border-radius:52% 52% 9% 9%;background:rgba(255,255,255,.66);box-shadow:0 13px 24px rgba(29,50,51,.12)}.collection-art.blush{background:var(--rose)}.collection-art.sand{background:var(--sand)}.collection-art.teal{background:#5b7777}.collection-showcase h3{font:500 24px/1.2 "Playfair Display",serif;margin:0 0 7px}.collection-showcase p{color:var(--muted);font-size:14px;margin:0}.collection-showcase-cards article{cursor:pointer;transition:transform .2s ease}.collection-showcase-cards article:hover,.collection-showcase-cards article:focus-visible{transform:translateY(-4px)}.collection-showcase-cards article:hover .collection-art,.collection-showcase-cards article:focus-visible .collection-art{box-shadow:0 18px 30px rgba(29,50,51,.16)}.collection-showcase-cards article:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.collection-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}.collection-option-slot{aspect-ratio:1/1;border:1.5px dashed var(--line);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:14px;color:var(--muted)}.collection-option-slot .plus{font-size:22px;color:var(--gold);line-height:1}.collection-option-slot span{font-size:11px;line-height:1.4}.modal-box.wide{width:min(940px,100%)}.collection-photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:10px}.collection-photo-grid a{display:block;aspect-ratio:1/1;border-radius:12px;overflow:hidden}.collection-photo-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}.collection-photo-grid a:hover img{transform:scale(1.06)}.collection-art.has-photo{background-size:cover;background-position:center}.collection-art.has-photo:after{content:none}.collection-cover{width:100%;max-height:340px;object-fit:cover;border-radius:14px;margin:14px 0 4px;display:block}
+
+/* Locked initial: gold outline only, with no black circle/background. */
+.about-recreated .story-mark{background:transparent;overflow:hidden;padding:8%}.about-recreated .story-mark img{width:100%;height:100%;display:block;object-fit:contain;mix-blend-mode:normal}.gift-grid{grid-template-columns:repeat(5,1fr)}
+
+/* Strong, palette-matched callout for the custom-order action. */
+.custom-order-callout{display:inline-block;padding:7px;background:var(--sand);border:1px solid var(--gold)}.custom-order-callout .btn{display:block;border:0;border-radius:0;background:var(--ink);color:#fff;padding:15px 24px;letter-spacing:.06em;text-transform:uppercase;font-size:12px}.custom-order-callout .btn:hover{background:var(--gold)}
+
+/* Hero now carries the approved daisy-candle carousel, so the earlier
+   text-only centered treatment no longer applies. Two-column layout
+   (carousel left, copy right) is defined in styles.css. */
+
+@media(max-width:900px){.collection-showcase-cards{grid-template-columns:1fr}.collection-art{aspect-ratio:1.8/1}.gift-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.collection-showcase{padding:70px 6%}.gift-grid{grid-template-columns:1fr}}
+
+</style>
 </head>
 <body>
-<div class="topbar">UAE DELIVERY • PERSONALIZED GIFTING • HANDCRAFTED IN SMALL BATCHES</div>
+<div class="topbar">✓ Handcrafted · ✓ Personalization · ✓ Event Gifting · ✓ UAE Delivery</div>
 
 <header class="header">
-  <a href="#home" class="logo"><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"></a>
+  <a href="#home" class="logo"><img src="assets/mg-crafted-creations-logo.png" alt="MG Crafted Creations"></a>
   <nav id="nav">
     <a href="#shop">Shop</a><a href="#personalize">Personalize</a><a href="#gifting">Gifting</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
   </nav>
@@ -32,24 +235,44 @@
 
 <main id="home">
 <section class="hero">
-  <div class="hero-visual">
-    <img class="hero-photo" src="assets/hero/cover.jpg" alt="MG Crafted Candles — Sakura, Black Ice and Sandalwood scented candles">
+  <div class="hero-visual" id="heroCarousel">
+    <img class="hero-photo active" src="assets/ready-made/IMG_5774.jpg" alt="MG Crafted Creations — periwinkle daisy candle">
+    <img class="hero-photo" src="assets/ready-made/IMG_5774.jpg" alt="MG Crafted Creations — sage daisy candle">
+    <img class="hero-photo" src="assets/ready-made/IMG_5774.jpg" alt="MG Crafted Creations — rose daisy candle">
+    <img class="hero-photo" src="assets/ready-made/IMG_5774.jpg" alt="MG Crafted Creations — ivory daisy candle">
+    <img class="hero-photo" src="assets/ready-made/IMG_5774.jpg" alt="MG Crafted Creations — gold daisy candle">
+    <button class="hero-arrow prev" type="button" aria-label="Previous slide">‹</button>
+    <button class="hero-arrow next" type="button" aria-label="Next slide">›</button>
+    <div class="hero-dots">
+      <button class="hero-dot active" type="button" aria-label="Slide 1"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 2"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 3"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 4"></button>
+      <button class="hero-dot" type="button" aria-label="Slide 5"></button>
+    </div>
   </div>
   <div class="hero-content">
-    <span class="eyebrow">MG CRAFTED CANDLES • UAE</span>
+    <span class="eyebrow">MG CRAFTED CREATIONS • UAE</span>
     <h1>Gifts that feel<br><em>made for them.</em></h1>
     <p>Handcrafted candles, personalized fragrances and thoughtful gifting for birthdays, weddings, baby showers, corporate events and everyday moments.</p>
-    <div class="hero-buttons"><a class="btn dark" href="#shop">Shop candles</a><a class="btn light" href="#personalize">Create a custom gift</a></div>
-    <div class="mini-trust"><span>✓ Handpoured</span><span>✓ Personalization</span><span>✓ Event gifting</span><span>✓ UAE delivery</span></div>
+    <div class="mini-trust"><span>✓ Handcrafted</span><span>✓ Personalization</span><span>✓ Event gifting</span><span>✓ UAE delivery</span></div>
   </div>
 </section>
 
 <section class="collection-showcase" id="collections" aria-labelledby="collection-showcase-title">
   <div class="collection-showcase-heading"><span class="eyebrow">THE COLLECTION</span><h2 id="collection-showcase-title">Made for gifting,<br>and keeping.</h2><p class="handmade-badge">Handmade individually — small variations are part of the charm.</p></div>
   <div class="collection-showcase-cards">
-    <article data-collection="ready" role="button" tabindex="0"><span class="collection-art blush has-photo" style="background-image:url('assets/ready-made/cover.jpg')"></span><h3>Ready-made candles</h3><p>Quiet rituals for every day.</p></article>
-    <article data-collection="personalized" role="button" tabindex="0"><span class="collection-art sand has-photo" style="background-image:url('assets/personalized/cover.jpg')"></span><h3>Personalized gifts</h3><p>Details made just for them.</p></article>
-    <article data-collection="celebration" role="button" tabindex="0"><span class="collection-art teal has-photo" style="background-image:url('assets/celebration/cover.jpg')"></span><h3>Celebration favors</h3><p>For weddings, birthdays, baby showers and more.</p></article>
+    <article data-collection="ready" role="button" tabindex="0"><span class="collection-art blush has-photo" style="background-image:url('assets/ready-made/IMG_5774.jpg')"></span>
+<h3>MG Candles</h3><p>Ready-made candles for quiet rituals and thoughtful gifting.</p></article>
+
+    <article data-collection="personalized" role="button" tabindex="0"><span class="collection-art sand has-photo" style="background-image:url('assets/ready-made/IMG_5774.jpg')"></span>
+<h3>MG Personalized Gifts</h3><p>Details made just for them.</p></article>
+
+    <article data-collection="celebration" role="button" tabindex="0"><span class="collection-art teal has-photo" style="background-image:url('assets/ready-made/IMG_5774.jpg')"></span>
+<h3>MG Home &amp; Décor</h3><p>Handcrafted concrete pieces for your home.</p></article>
+<article data-collection="souvenirs" role="button" tabindex="0"><span class="collection-art blush"></span><h3>MG Souvenirs</h3><p>Small keepsakes made to remember special moments.</p></article>
+<article data-collection="paint-kits" role="button" tabindex="0"><span class="collection-art sand"></span><h3>DIY Paint Kits</h3><p>Creative handmade kits for your next project.</p></article>
+
   </div>
 </section>
 
@@ -73,16 +296,27 @@
     <div class="check-list"><span>✓ Choose a fragrance mood</span><span>✓ Add a name, date or message</span><span>✓ Select your occasion</span><span>✓ Request quantities for events</span></div>
     <div class="custom-order-callout"><button class="btn dark" id="customBtn">Start a custom order</button></div>
   </div>
+  <div class="personalize-art"></div>
 </section>
 
 <section class="section" id="gifting">
   <div class="heading-row centered"><span class="eyebrow">PERSONALIZED GIFTING</span><h2>Made for the moments you celebrate.</h2><p>From one thoughtful present to personalized favors for your whole event.</p></div>
   <div class="gift-grid">
-    <article><span>01</span><h3>Birthdays</h3><p>Personalized candles with names, ages, messages and favorite scents.</p><button class="text-btn" data-occasion="Birthday">Create birthday gift →</button></article>
-    <article><span>02</span><h3>Weddings</h3><p>Wedding favors and keepsakes designed around your theme and special date.</p><button class="text-btn" data-occasion="Wedding">Plan wedding favors →</button></article>
-    <article><span>03</span><h3>Baby Showers</h3><p>Sweet favors and thank-you gifts for celebrating a new little love.</p><button class="text-btn" data-occasion="Baby Shower">Create baby shower favors →</button></article>
-    <article><span>04</span><h3>Corporate</h3><p>Branded and personalized gifts for clients, teams, events and launches.</p><button class="text-btn" data-occasion="Corporate">Request corporate quote →</button></article>
-    <article><span>05</span><h3>For your occasion</h3><p>A custom candle for any moment you want to celebrate, your way.</p><button class="text-btn" data-occasion="Other">Create your occasion gift →</button></article>
+    <article><span>01</span>
+<h3>Birthdays</h3><p>Personalized candles with names, ages, messages and favorite scents.</p><button class="text-btn" data-occasion="Birthday">Create birthday gift →</button></article>
+
+    <article><span>02</span>
+<h3>Weddings</h3><p>Wedding favors and keepsakes designed around your theme and special date.</p><button class="text-btn" data-occasion="Wedding">Plan wedding favors →</button></article>
+
+    <article><span>03</span>
+<h3>Baby Showers</h3><p>Sweet favors and thank-you gifts for celebrating a new little love.</p><button class="text-btn" data-occasion="Baby Shower">Create baby shower favors →</button></article>
+
+    <article><span>04</span>
+<h3>Corporate</h3><p>Branded and personalized gifts for clients, teams, events and launches.</p><button class="text-btn" data-occasion="Corporate">Request corporate quote →</button></article>
+
+    <article><span>05</span>
+<h3>For your occasion</h3><p>A custom candle for any moment you want to celebrate, your way.</p><button class="text-btn" data-occasion="Other">Create your occasion gift →</button></article>
+
   </div>
 </section>
 
@@ -96,17 +330,15 @@
 </section>
 
 <section class="section about about-recreated" id="about" aria-labelledby="our-story-title">
-  <div class="story-mark" aria-label="MG Crafted Candles logo"><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"></div>
+  <div class="story-mark" aria-label="MG Crafted Creations logo"><img src="assets/mg-crafted-creations-logo.png" alt="MG Crafted Creations"></div>
 
   <div class="story-copy">
     <span class="eyebrow">OUR STORY</span>
     <h2 id="our-story-title">Handcrafted with <em>you</em><br class="story-break"> in mind.</h2>
 
-    <p class="story-lede">Every candle is one of a kind — shaped by hand, so no two ever turn out quite the same.</p>
+    <p class="story-lede">Every piece is one of a kind — shaped by hand, so no two ever turn out quite the same.</p>
 
-    <p>MG Crafted Candles is built around the idea that a candle can be more than home fragrance<br class="desktop-only"> — it can become a memory, a thank-you, a celebration or a little reminder of someone special.</p>
-
-    <p>Every piece is handcrafted in small batches, with personalization and thoughtful gifting at the<br class="desktop-only"> heart of what we do.</p>
+    <p>MG Crafted Creations is built around the idea that handcrafted pieces can be more than décor or a gift — they can become a memory, a thank-you, a celebration, or a little reminder of someone special.</p>
   </div>
 </section>
 
@@ -126,14 +358,189 @@
 </section>
 </main>
 
-<footer><div><img src="assets/mg-crafted-candles-logo.png" alt="MG Crafted Candles"><p>Handcrafted candles & personalized gifts in the UAE.</p></div><div class="footer-nav"><a href="#shop">Shop</a><a href="#personalize">Custom</a><a href="#gifting">Gifting</a><a href="#contact">Contact</a></div><div><p><a href="https://www.instagram.com/mgcraftedcandles?stkn=MWhtbG95aDVqdHExbg%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> • Facebook • TikTok</p><small>© <span id="year"></span> MG Crafted Candles</small></div></footer>
+<footer><div><img src="assets/mg-crafted-creations-logo.png" alt="MG Crafted Creations"><p>Handcrafted candles & personalized gifts in the UAE.</p></div><div class="footer-nav"><a href="#shop">Shop</a><a href="#personalize">Custom</a><a href="#gifting">Gifting</a><a href="#contact">Contact</a></div><div><p><a href="https://www.instagram.com/mgcraftedcandles?stkn=MWhtbG95aDVqdHExbg%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> • Facebook • TikTok</p><small>© <span id="year"></span> MG Crafted Creations</small></div></footer>
 
 <div id="productModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><div id="productDetail"></div></div></div>
 <div id="collectionModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow" id="collectionModalEyebrow">CATEGORY</span><h2 id="collectionModalTitle">Options</h2><img id="collectionModalCover" class="collection-cover" style="display:none" alt=""><p id="collectionModalIntro" class="muted"></p><div class="collection-options" id="collectionModalOptions"></div></div></div>
 <div id="customModal" class="modal"><div class="modal-box"><button class="close" data-close>×</button><span class="eyebrow">CUSTOM CANDLE</span><h2>Make it <em>personal.</em></h2><form id="customForm"><input name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required><select name="occasion" id="customOccasion" required><option value="">Occasion</option><option>Birthday</option><option>Wedding</option><option>Baby Shower</option><option>Corporate</option><option>Other</option></select><input name="quantity" type="number" min="1" placeholder="Quantity" required><select name="fragrance" id="customFragrance"><option value="">Fragrance preference (optional)</option><option>Cozy</option><option>Fresh</option><option>Sweet</option><option>Floral</option><option>Earthy</option><option>Not sure — help me choose</option></select><input name="personalization" placeholder="Name / date / message / branding"><textarea name="details" rows="4" placeholder="Tell us about your candle idea"></textarea><button class="btn dark" type="submit">Send custom request on WhatsApp</button></form></div></div>
 
-<aside id="bag" class="bag"><div class="bag-head"><h3>Your bag</h3><button id="closeBag">×</button></div><div id="bagItems"></div><div class="bag-bottom"><div><span>Subtotal</span><b id="subtotal">AED 0</b></div><label>Delivery<select id="delivery"><option value="20">Dubai — AED 20</option><option value="30">Other Emirates — AED 30</option><option value="0">Pickup — AED 0</option></select></label><div><span>Total</span><b id="total">AED 20</b></div><button id="whatsappCheckout" class="btn dark">Order via WhatsApp</button><small>Online payment can be connected after you choose your payment provider.</small></div></aside>
+<aside id="bag" class="bag"><div class="bag-head">
+<h3>Your bag</h3><button id="closeBag">×</button></div><div id="bagItems"></div><div class="bag-bottom"><div><span>Subtotal</span><b id="subtotal">AED 0</b></div><label>Delivery<select id="delivery"><option value="20">Dubai — AED 20</option><option value="30">Other Emirates — AED 30</option><option value="0">Pickup — AED 0</option></select></label><div><span>Total</span><b id="total">AED 20</b></div><button id="whatsappCheckout" class="btn dark">Order via WhatsApp</button><small>Online payment can be connected after you choose your payment provider.</small></div></aside>
 <div id="shade"></div>
-<script src="script.js"></script>
+<script>
+const WHATSAPP_NUMBER="971527760547"; // MG Crafted Creations WhatsApp Business number.
+// Approved master brand asset — keep this file when making future website updates.
+const BRAND_LOGO="assets/mg-crafted-creations-logo.png";
+$(".logo img").src=BRAND_LOGO;
+$(".logo img").alt="MG Crafted Creations logo";
+
+(function heroCarousel(){
+ function init(){
+  const root=document.getElementById("heroCarousel");
+  if(!root)return;
+  const slides=[].slice.call(root.querySelectorAll(".hero-photo"));
+  const dots=[].slice.call(root.querySelectorAll(".hero-dot"));
+  if(slides.length<2)return;
+  let i=0,timer=null;
+  function show(n){
+   const next=(n%slides.length+slides.length)%slides.length;
+   slides.forEach((s,k)=>s.classList.toggle("active",k===next));
+   dots.forEach((d,k)=>d.classList.toggle("active",k===next));
+   i=next;
+  }
+  function start(){stop();timer=setInterval(function(){show(i+1);},4500);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function go(n){show(n);start();}
+
+  dots.forEach(function(d,n){d.addEventListener("click",function(e){e.preventDefault();go(n);});});
+  const prev=root.querySelector(".hero-arrow.prev");
+  const next=root.querySelector(".hero-arrow.next");
+  if(prev)prev.addEventListener("click",function(e){e.preventDefault();go(i-1);});
+  if(next)next.addEventListener("click",function(e){e.preventDefault();go(i+1);});
+
+  // swipe / drag
+  let x0=null;
+  function down(x){x0=x;stop();}
+  function up(x){
+   if(x0===null)return;
+   const dx=x-x0;x0=null;
+   if(Math.abs(dx)>40){show(dx<0?i+1:i-1);}
+   start();
+  }
+  root.addEventListener("touchstart",function(e){down(e.touches[0].clientX);},{passive:true});
+  root.addEventListener("touchend",function(e){up(e.changedTouches[0].clientX);},{passive:true});
+  root.addEventListener("mousedown",function(e){down(e.clientX);});
+  root.addEventListener("mouseup",function(e){up(e.clientX);});
+  root.addEventListener("mouseleave",function(){if(x0!==null){x0=null;start();}});
+
+  show(0);
+  start();
+ }
+ if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
+})();
+
+const products=[
+{id:1,name:"Warm Vanilla",desc:"Vanilla • amber • cozy woods",price:65,tag:"BESTSELLER",cats:["best","gift","cozy"],details:"A soft, comforting scent designed for cozy evenings and easy gifting."},
+{id:2,name:"Mocha Latte",desc:"Coffee • cream • warm sweetness",price:70,tag:"NEW",cats:["best","cozy"],details:"A warm coffee-inspired candle with creamy sweetness."},
+{id:3,name:"Rose Petals",desc:"Rose • musk • clean florals",price:68,tag:"FAVORITE",cats:["best","gift","floral"],details:"A soft floral profile with a clean, elegant finish."},
+{id:4,name:"Desert Bloom",desc:"Botanical florals • green notes",price:72,tag:"LIMITED",cats:["gift","floral"],details:"A fresh botanical scent inspired by desert flowers."},
+{id:5,name:"Strawberry Cream",desc:"Strawberry • vanilla • sugar",price:68,tag:"SWEET",cats:["gift"],details:"Playful, sweet and perfect for birthdays and cheerful gifting."},
+{id:6,name:"Soft Linen",desc:"Clean linen • airy musk",price:65,tag:"FRESH",cats:["best","gift"],details:"A clean, airy fragrance for a calm everyday atmosphere."},
+{id:7,name:"Sandalwood",desc:"Sandalwood • cedar • warm woods",price:75,tag:"SIGNATURE",cats:["cozy"],details:"Warm woods with a calm, sophisticated character."},
+{id:8,name:"Peony Blush",desc:"Peony • rose • soft musk",price:70,tag:"FLORAL",cats:["floral","gift"],details:"A soft floral candle suited to elegant gifting and events."}
+];
+let cart=[];
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+
+function renderProducts(list=products){
+ const productGrid=$("#products");
+ if(!productGrid)return;
+ productGrid.innerHTML=list.map(p=>`<article class="product-card" data-id="${p.id}">
+ <div class="product-photo"><span class="tag">${p.tag}</span><div class="jar">${p.name.split(" ")[0]}</div></div>
+ <div class="product-info">
+<h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">AED ${p.price}</span><div class="product-buttons"><button class="mini-btn" data-view="${p.id}">Details</button><button class="mini-btn dark" data-add="${p.id}">Add</button></div></div></div></article>
+`).join("");
+ $$("[data-add]").forEach(b=>b.onclick=()=>add(Number(b.dataset.add)));
+ $$("[data-view]").forEach(b=>b.onclick=()=>showProduct(Number(b.dataset.view)));
+}
+renderProducts();
+
+function add(id){
+ const p=products.find(x=>x.id===id), item=cart.find(x=>x.id===id);
+ if(item)item.qty++;else cart.push({...p,qty:1});
+ renderBag();openBag();
+}
+function renderBag(){
+ $("#bagCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
+ $("#bagItems").innerHTML=cart.length?cart.map(x=>`<div class="bag-item"><div><strong>${x.name}</strong><br><small>AED ${x.price} × ${x.qty}</small></div><button class="remove" data-remove="${x.id}">Remove</button></div>`).join(""):'<p class="muted">Your bag is empty.</p>';
+ $$("[data-remove]").forEach(b=>b.onclick=()=>{cart=cart.filter(x=>x.id!==Number(b.dataset.remove));renderBag()});
+ updateTotals();
+}
+function updateTotals(){
+ const sub=cart.reduce((s,x)=>s+x.price*x.qty,0), d=Number($("#delivery").value);
+ $("#subtotal").textContent=`AED ${sub}`;$("#total").textContent=`AED ${sub+d}`;
+}
+function openBag(){$("#bag").classList.add("open");$("#shade").classList.add("show")}
+function closeBag(){$("#bag").classList.remove("open");$("#shade").classList.remove("show")}
+$("#bagBtn").onclick=openBag;$("#closeBag").onclick=closeBag;$("#shade").onclick=closeBag;$("#delivery").onchange=updateTotals;
+
+function wa(text){window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,"_blank")}
+$("#whatsappCheckout").onclick=()=>{
+ if(!cart.length){alert("Your bag is empty.");return}
+ const d=Number($("#delivery").value), sub=cart.reduce((s,x)=>s+x.price*x.qty,0);
+ const lines=cart.map(x=>`${x.name} x${x.qty} — AED ${x.price*x.qty}`).join("%0A");
+ wa(`Hello MG Crafted Creations!%0A%0AI'd like to order:%0A${lines}%0A%0ASubtotal: AED ${sub}%0ADelivery: AED ${d}%0ATotal: AED ${sub+d}%0A%0APlease confirm availability and delivery details.`);
+};
+
+function showProduct(id){
+ const p=products.find(x=>x.id===id);
+ $("#productDetail").innerHTML=`<div class="detail-grid"><div class="detail-image"><div class="jar">${p.name.split(" ")[0]}</div></div><div class="detail-copy"><span class="eyebrow">${p.tag}</span><h2>${p.name}</h2><p class="detail-price">AED ${p.price}</p><p>${p.details}</p><ul><li>Handcrafted in small batches</li><li>Gift-ready packaging available</li><li>UAE delivery options</li></ul><button class="btn dark" data-modal-add="${p.id}">Add to bag</button></div></div>`;
+ $("#productModal").classList.add("show");
+ $("[data-modal-add]").onclick=()=>{add(id);$("#productModal").classList.remove("show")};
+}
+$$("[data-close]").forEach(b=>b.onclick=()=>b.closest(".modal").classList.remove("show"));
+$$(".modal").forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove("show")});
+
+$$(".filter").forEach(b=>b.onclick=()=>{
+ $$(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");
+ const f=b.dataset.filter;renderProducts(f==="all"?products:products.filter(p=>p.cats.includes(f)));
+});
+$("#searchBtn").onclick=()=>{$("#searchPanel").classList.toggle("show");$("#searchInput").focus()};
+$("#searchInput").oninput=e=>{const q=e.target.value.toLowerCase();renderProducts(products.filter(p=>(p.name+" "+p.desc+" "+p.details).toLowerCase().includes(q)))};
+$("#menuBtn").onclick=()=>$("#nav").classList.toggle("open");
+$$("#nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
+
+const collectionInfo={
+ ready:{eyebrow:"READY-MADE CANDLES",title:"Quiet rituals for every day.",intro:"Our ready-made lineup is being revised — updated photos and pieces are on the way.",cover:null},
+ personalized:{eyebrow:"PERSONALIZED GIFTS",title:"Details made just for them.",intro:"Custom label, scent and message options will be added here. Photos coming soon.",cover:null},
+ celebration:{eyebrow:"CELEBRATION FAVORS",title:"For weddings, birthdays, baby showers and more.",intro:"Event favor bundles and packaging options will be added here. Photos coming soon.",cover:null}
+};
+const collectionDetails={
+ ready:{eyebrow:"MG CANDLES",title:"Ready-made candles",intro:"Explore the current MG candle collection. Tap a photo to view it larger.",photos:["IMG_5774","IMG_5773","IMG_5772","IMG_5771","IMG_5770","IMG_0380","IMG_0306","IMG_0281","IMG_0282"]},
+ personalized:{eyebrow:"MG PERSONALIZED GIFTS",title:"Made just for them.",intro:"Personalized gift options are being prepared. Share your idea with us on WhatsApp and we will help you create something meaningful."},
+ celebration:{eyebrow:"MG HOME & DÉCOR",title:"Handcrafted concrete pieces",intro:"A future collection of handcrafted concrete home décor, made in small batches."},
+ souvenirs:{eyebrow:"MG SOUVENIRS",title:"Keepsakes for special moments",intro:"A future collection of small handmade souvenirs for celebrations, guests and thoughtful gifts."},
+ "paint-kits":{eyebrow:"DIY PAINT KITS",title:"Create something yourself",intro:"DIY paint kits are coming soon — an easy, creative way to make your own MG piece at home."}
+};
+
+function openCollection(key){
+ const info=collectionDetails[key]||collectionInfo[key];if(!info)return;
+ $("#collectionModalEyebrow").textContent=info.eyebrow;
+ $("#collectionModalTitle").textContent=info.title;
+ $("#collectionModalIntro").textContent=info.intro;
+ const cover=$("#collectionModalCover");
+ if(info.cover){cover.src=info.cover;cover.alt=info.title;cover.style.display="block";}else{cover.style.display="none";cover.removeAttribute("src");}
+ const box=$("#collectionModal .modal-box");
+ if(info.photos){
+  box.classList.add("wide");
+  $("#collectionModalOptions").className="collection-photo-grid";
+  $("#collectionModalOptions").innerHTML=info.photos.map(name=>`<a href="assets/ready-made/${name}.jpg" target="_blank"><img src="assets/ready-made/${name}.jpg" alt="${info.title}" loading="lazy"></a>`).join("");
+ } else {
+  box.classList.remove("wide");
+  $("#collectionModalOptions").className="collection-options";
+  $("#collectionModalOptions").innerHTML=Array.from({length:3}).map((_,i)=>`<div class="collection-option-slot"><span class="plus">+</span><span>Option ${i+1}<br>photo &amp; details coming soon</span></div>`).join("");
+ }
+ $("#collectionModal").classList.add("show");
+}
+$$("[data-collection]").forEach(card=>{
+ card.onclick=()=>openCollection(card.dataset.collection);
+ card.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCollection(card.dataset.collection);}};
+});
+function openCustom(occasion=""){ $("#customModal").classList.add("show");if(occasion)$("#customOccasion").value=occasion; }
+$("#customBtn").onclick=()=>openCustom();
+$$("[data-occasion]").forEach(b=>b.onclick=()=>openCustom(b.dataset.occasion));
+
+$("#customForm").onsubmit=e=>{
+ e.preventDefault();const d=new FormData(e.target);
+ wa(`Hello MG Crafted Creations!%0A%0ACUSTOM ORDER REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AOccasion: ${d.get("occasion")}%0AQuantity: ${d.get("quantity")}%0AFragrance: ${d.get("fragrance")||"No preference"}%0APersonalization: ${d.get("personalization")}%0ADetails: ${d.get("details")}`);
+};
+$("#contactForm").onsubmit=e=>{
+ e.preventDefault();const d=new FormData(e.target);
+ wa(`Hello MG Crafted Creations!%0A%0AINQUIRY%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AEmail: ${d.get("email")}%0AOccasion: ${d.get("occasion")}%0AMessage: ${d.get("message")}`);
+};
+$("#year").textContent=new Date().getFullYear();
+renderBag();
+
+</script>
 </body>
 </html>
