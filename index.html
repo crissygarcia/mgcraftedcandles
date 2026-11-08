@@ -219,6 +219,10 @@
   .personalize-art img{width:100%;height:100%;object-fit:cover;display:block}
   .personalize-art span{position:absolute;z-index:1;left:28px;bottom:24px;color:#fff;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
 </style>
+<style>
+  .custom-planner{margin-top:22px;padding:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:14px;color:#fff}
+  .custom-planner[hidden]{display:none}.planner-step{margin:0 0 18px}.planner-step:last-of-type{margin-bottom:12px}.planner-step label,.planner-step>span{display:block;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:9px}.planner-tabs{display:flex;flex-wrap:wrap;gap:8px}.planner-choice{appearance:none;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;border-radius:999px;padding:9px 13px;font:600 .9rem/1 Arial,sans-serif;cursor:pointer}.planner-choice.active{background:#d8a95d;border-color:#d8a95d;color:#163c3e}.custom-planner input,.custom-planner textarea{box-sizing:border-box;width:100%;border:1px solid rgba(255,255,255,.4);border-radius:8px;background:#fff;color:#173f41;padding:11px;margin-top:8px;font:inherit}.custom-planner .planner-submit{margin-top:8px;width:100%}.planner-note{font-size:.82rem;opacity:.82;margin:0 0 10px}
+</style>
 </head>
 <body>
 <div class="topbar">✓ Handcrafted · ✓ Personalization · ✓ Event Gifting · ✓ UAE Delivery</div>
@@ -298,7 +302,16 @@
     <h2>Made for your<br><em>moment.</em></h2>
     <p>Your idea. Your message. Your keepsake. Create a thoughtful piece for a birthday, wedding, baby shower, corporate event, or simply someone special.</p>
     <div class="check-list"><span>✓ Choose your product or gift style</span><span>✓ Add a name, date or message</span><span>✓ Match your colours or event theme</span><span>✓ Request single gifts or event quantities</span></div>
-    <div class="custom-order-callout"><button class="btn dark" id="customBtn">Start a custom request</button></div>
+    <div class="custom-order-callout"><button class="btn dark" id="customBtn" aria-expanded="false" aria-controls="customPlanner">Start a custom request</button>
+      <form id="customPlanner" class="custom-planner" hidden>
+        <div class="planner-step"><span>1. Choose your product or gift style</span><div class="planner-tabs" data-planner-field="product"><button type="button" class="planner-choice active" data-value="Candles">Candles</button><button type="button" class="planner-choice" data-value="Paint Kits">Paint Kits</button></div><input type="hidden" name="product" value="Candles"></div>
+        <div class="planner-step"><label for="plannerMessage">2. Add a name, date or message</label><textarea id="plannerMessage" name="personalization" rows="3" placeholder="For example: Sarah & Omar · 24 December 2026"></textarea></div>
+        <div class="planner-step"><span>3. Match your colours or event theme</span><div class="planner-tabs" data-planner-field="colour"><button type="button" class="planner-choice active" data-value="No preference">No preference</button><button type="button" class="planner-choice" data-value="Blush & Gold">Blush & Gold</button><button type="button" class="planner-choice" data-value="Sage & Cream">Sage & Cream</button><button type="button" class="planner-choice" data-value="Custom theme">Custom theme</button></div><input type="hidden" name="colour" value="No preference"><input name="colourDetails" placeholder="Optional: describe your colours or theme"></div>
+        <div class="planner-step"><span>4. Choose your order type</span><div class="planner-tabs" data-planner-field="orderType"><button type="button" class="planner-choice active" data-value="Single gift">Single gift</button><button type="button" class="planner-choice" data-value="Event order">Event order</button></div><input type="hidden" name="orderType" value="Single gift"><input name="quantity" type="number" min="1" value="1" placeholder="Quantity"></div>
+        <div class="planner-step"><label for="plannerName">Your name and WhatsApp number</label><input id="plannerName" name="name" placeholder="Your name" required><input name="phone" placeholder="WhatsApp number" required></div>
+        <p class="planner-note">We will review your request and reply through WhatsApp.</p><button class="btn gold planner-submit" type="submit">Send custom request on WhatsApp</button>
+      </form>
+    </div>
   </div>
   <div class="personalize-art"><img src="assets/ready-made/IMG_0282.jpg" alt="A handcrafted MG candle gift"><span>Handmade details, made personal</span></div>
 </section>
@@ -535,7 +548,10 @@ $$("[data-collection]").forEach(card=>{
  card.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCollection(card.dataset.collection);}};
 });
 function openCustom(occasion=""){ $("#customModal").classList.add("show");if(occasion)$("#customOccasion").value=occasion; }
-$("#customBtn").onclick=()=>openCustom();
+const customPlanner=$("#customPlanner");
+$("#customBtn").onclick=()=>{const opening=customPlanner.hidden;customPlanner.hidden=!opening;$("#customBtn").setAttribute("aria-expanded",String(opening));if(opening)customPlanner.scrollIntoView({behavior:"smooth",block:"nearest"});};
+$$('.planner-tabs').forEach(group=>{group.querySelectorAll('button').forEach(button=>button.onclick=()=>{group.querySelectorAll('button').forEach(choice=>choice.classList.toggle('active',choice===button));group.parentElement.querySelector(`input[name="${group.dataset.plannerField}"]`).value=button.dataset.value;});});
+customPlanner.onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);wa(`Hello MG Crafted Creations!%0A%0ACUSTOM CREATION REQUEST%0AName: ${d.get("name")}%0AWhatsApp: ${d.get("phone")}%0AProduct: ${d.get("product")}%0APersonalization: ${d.get("personalization")||"None"}%0AColours / theme: ${d.get("colour")} ${d.get("colourDetails")||""}%0AOrder type: ${d.get("orderType")}%0AQuantity: ${d.get("quantity")}`);};
 $$("[data-occasion]").forEach(b=>b.onclick=()=>openCustom(b.dataset.occasion));
 
 $("#customForm").onsubmit=e=>{
